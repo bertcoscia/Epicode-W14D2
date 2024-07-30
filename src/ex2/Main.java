@@ -27,8 +27,22 @@ public class Main {
         return newList;
     }
 
+    public static void evenOdd(boolean condition, List<Integer> list) {
+        if (condition) {
+            for (int i = 0; i < list.size() - 1; i = i + 2) {
+                System.out.println(list.get(i));
+            }
+        } else {
+            for (int i = 1; i <= list.size() - 1; i = i + 2) {
+                System.out.println(list.get(i));
+            }
+        }
+    }
+
     public static void main(String[] args) {
         List<Integer> list1 = randomNumbers(3);
         List<Integer> list2 = listHandler(list1);
+        evenOdd(true, list2);
+        evenOdd(false, list2);
     }
 }
