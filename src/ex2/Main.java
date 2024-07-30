@@ -1,6 +1,7 @@
 package ex2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -12,7 +13,7 @@ public class Main {
             Random random = new Random();
             numbersList.add(random.nextInt(0, 100));
         }
-        System.out.println(numbersList);
+        Collections.sort(numbersList);
         return numbersList;
     }
 
